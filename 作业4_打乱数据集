@@ -1,0 +1,11 @@
+import random
+x = ['快递太慢了！','不好吃','特别难吃','要齁死我了','很划算','下次还来','味道很不错！','香']
+y = ['差评','差评','差评','差评','好评','好评','好评','好评']
+z=list(zip(x,y))
+random.shuffle(z)
+x,y=zip(*z)
+print(x)
+print(y)
+for i,k in zip(x,y):
+    print(i,k)
+
