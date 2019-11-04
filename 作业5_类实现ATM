@@ -1,0 +1,48 @@
+class ATM():
+    balance = 20
+    def __int__(self,balance,money,require):
+        self.balance=balance
+        self.money=money
+        self.require=require
+
+    def menu(self):
+        while True:
+            print ( """
+            ===========
+            请选择操作
+            1. 查询余额
+            2. 存款
+            3. 取款
+            4. 退出
+            ===========
+
+            """)
+            choice=int(input('请输入选择项：'))
+            if choice ==1:
+                self.chaxun()
+            elif choice==2:
+                self.cunkuan()
+            elif choice==3:
+                self.qukuan()
+            elif choice==4:
+                print('退出')
+                break
+            else:
+                print('请选择正确操作')
+                continue
+
+    def chaxun(self):
+        balance=print('余额为:',self.balance)
+
+    def cunkuan(self):
+        self.money = int(input('请输入存款金额：'))
+        self.balance += self.money
+    def qukuan(self):
+        self.require = int(input('请输入取款金额：'))
+        if self.require > self.balance:
+            print('余额不足！')
+        else:
+            self.balance -= self.require
+            print('已取出存款', self.require, '元')
+ATM=ATM()
+ATM.menu()
