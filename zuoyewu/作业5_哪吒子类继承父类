@@ -1,0 +1,24 @@
+class Lijing():
+    def __init__(self, name, power=10, tools=[]):
+        self.name=name
+        self.tools=tools
+        self.power=power
+
+    def count_fight(self,tool,tool_power):
+        self.tools.append(tool)
+        self.power+=tool_power
+
+
+class Nezha(Lijing):
+    def __init__(self,name,tools=['混天绫','乾坤圈'],power=50):
+        self.tools = tools
+        self.power = power
+lijing=Lijing('李靖')
+print(lijing.tools)
+print(lijing.power)
+lijing.count_fight('宝塔',20)
+print(lijing.tools,lijing.power)
+nezha=Nezha('哪吒')
+print(nezha.tools,nezha.power)
+nezha.count_fight('火尖枪',10)
+print(nezha.tools,nezha.power)
