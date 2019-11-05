@@ -42,3 +42,4 @@ class ATM():
             print('已取出存款', self.require, '元')
 ATM=ATM()
 ATM.menu()
+
